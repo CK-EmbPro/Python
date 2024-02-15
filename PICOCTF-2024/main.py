@@ -12,7 +12,9 @@ def reverse_transformation(ciphertext):
     return plaintext
 
 # Read the content from "rev_this" file
-ciphertext = "picoCTF{w1{1wq85jc=2i0<}"
+with open("rev_this", "r") as file:
+    ciphertext = file.read()
+
 # Reverse the transformation
 original_content = reverse_transformation(ciphertext)
 
